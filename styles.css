@@ -109,7 +109,7 @@
   
   .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -118,6 +118,7 @@
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
   }
+
   
   .nav-list {
     display: flex;
@@ -133,9 +134,23 @@
       margin: 0 1rem;
     }
   }
+
+  .logo {
+    display: inline-block;
+    font-size: 2.2rem;
+    padding: 1em;
+    animation: animate 4s;
+    /* float:left; */
+}
+
+@keyframes animate {
+  from {font-color: red;}
+  to {font-color: yellow;}
+}
   
+ 
   .nav-list a {
-    display: block;
+    display: inline-block;
     font-size: 2.2rem;
     padding: 2rem;
   }
@@ -193,6 +208,7 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
+    overflow:hidden;
   }
   
   @media (max-width: 30.625em) {
@@ -207,8 +223,8 @@
   
   .project {
     background: var(--main-gray);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+    border-radius: 10px;
   }
   
   .code {
@@ -224,6 +240,8 @@
     height: calc(100% - 6.8rem);
     width: 100%;
     object-fit: cover;
+    filter:blur(0.5px);
+    border-radius: 10px 10px 0 0;
   }
   
   .project-title {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head>
+    <link rel="stylesheet" href="animation.css">
+  </head>
+  <body>
+
+    <div class="space"> </div>
+
+    <div class="square-wrapper">
+      <div class="square"></div>
+    </div>
+
+    <!-- <embed src="./index_pdf/CV programming.pdf" width="800px" height="1200" /> -->
+
+    <div class="space"> </div>
+
+    <!-- java script for animation https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/-->
+    <script> 
+      const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelector('.square');
+
+    if (entry.isIntersecting) {
+      square.classList.add('square-animation');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('square-animation');
+  });
+});
+observer.observe(document.querySelector('.square-wrapper'));
+    </script>
+
+  </body>
+
+</html>

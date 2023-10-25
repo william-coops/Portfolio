@@ -1,0 +1,30 @@
+.square {
+    width: 200px;
+    height: 200px;
+    background: orange;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .square-animation {
+      animation: wipe-enter 1s 1;
+    }
+  }
+
+  .space {
+    height: 1000px;
+  }
+
+  @keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .square {
+      animation: wipe-enter 1s 1;
+    }
+  } */
