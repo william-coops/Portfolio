@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html><head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
@@ -8,7 +9,7 @@
   <body>
     <!-- START NAV -->
       <nav id="navbar" class="nav">
-        <p class="logo">William Cooper</p>
+        <p><h1 class="logo" id="logo"></h1></p>
         <ul class="nav-list">
           <li>
             <a href="#welcome-section">About</a>
@@ -27,8 +28,19 @@
     <!-- START WELCOME SECTION -->
 
     <section id="welcome-section" class="welcome-section">
-      <h1>Hey I am William Cooper</h1>
-      <p>I am unemployed</p>
+      <p class="bruh2" id="bruh2">Hey I am</p>
+      <!-- <h1 class="trigger_logo" id="trigger_logo">
+        <span class="slides">
+          <span class="slides1" id="name_span">
+            <span>William Cooper</span>
+            <span>William Cooper</span>
+          </span>
+        </span>
+      </h1> -->
+      <h1 class="trigger_logo" id="trigger_logo">William Cooper</h1>
+      <!-- <img class="avatar" src="./index_images/avatar.jpg"> -->
+      <p id="bruh" class="bruh">I am unemployed</p>
+      <!-- <img class="avatar" src="./index_images/avatar.jpg"> -->
     </section>
 
     <!-- END WELCOME SECTION -->
@@ -47,7 +59,7 @@
             <span class="code">/&gt;</span>
           </p>
         </a>
-        <a href="./newpage.html" target="_blank" class="project project-tile">
+        <a href="./index_pdf/S2_Report.pdf" target="_blank" class="project project-tile">
           <img class="project-image" src="./index_images/Mphys_report.jpg" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
@@ -64,7 +76,7 @@
           </p>
         </a>
         <a href="https://www.google.com" target="_blank" class="project project-tile">
-          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="project">
+          <img class="project-image" src="./index_images/art.jpeg" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
             My Art Work
@@ -72,7 +84,7 @@
           </p>
         </a>
         <a href="./index.html" class="project project-tile">
-          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="project">
+          <img class="project-image" src="" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
             This Website!
@@ -80,7 +92,7 @@
           </p>
         </a>
         <a href="https://www.google.com" target="_blank" class="project project-tile">
-          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="project">
+          <img class="project-image" src="" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
             Other
@@ -105,6 +117,7 @@
         <!-- <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a> -->
         <a id="profile-link" href="https://github.com/william-coops" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
         <!-- <a href="https://twitter.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter</a> -->
+        <a id="profile-link" href="https://www.linkedin.com/in/will-coop" target="_blank" class="btn contact-details"><i class="fab fa-LinkedIn"> LinkedIn</i></a>
         <a href="mailto:will.coops@me.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
         <a href="tel:+44 7929 859841" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
       </div>
@@ -124,6 +137,121 @@
     </footer>
 
     <!-- END FOOTER SECTION -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // const animatedText = document.getElementById('logo');
+      // const triggerDiv = document.getElementById('trigger_logo');
+      // const blankText = "";
+      // const logotext = "William Cooper"
+  
+      // function isElementInViewport(element) {
+      //     const rect = element.getBoundingClientRect();
+      //     return (
+      //         rect.top >= 0 &&
+      //         rect.left >= 0 &&
+      //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      //     );
+      // }
+  
+      // function animateTextIfOutOfView() {
+      //     if (!isElementInViewport(triggerDiv)) {
+      //         // animatedText.style.animationPlayState = 'running';
+      //         animatedText.style.animation = "textAnimation 0.5s"
+
+      //         animatedText.textContent = logotext;
+      //     } else {
+      //         // animatedText.style.animationPlayState = 'running';
+      //         // animatedText.textContent = logotext;
+      //         animatedText.style.animation ="textAnimation_reverse 1s"
+      //         animatedText.textContent = blankText;
+      //     }
+      // }
+  
+      // // Initial check and set the animation state
+      // animateTextIfOutOfView();
+  
+      // // Listen for scroll events to check the div's visibility
+      // window.addEventListener('scroll', animateTextIfOutOfView);
+
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+      const stickyText = document.querySelector(".trigger_logo");
+      const bruh = document.querySelector(".bruh")
+      const text_an = document.getElementsByClassName("trigger_logo")
+      // const name_span = document.getElementById("name_span")
+      
+    
+      window.addEventListener("scroll", function () {
+        if (window.scrollY >= bruh.offsetTop) {
+            // stickyText.classList.add('welcome-section.animation')
+            stickyText.style.position = "fixed";
+            stickyText.style.top = "0";
+            // text_an.classList.add('welcome-section.animation');
+            stickyText.classList.add("h1_gradient")
+        } else {
+            // stickyText.classList.remove('welcome-section.animation')
+            stickyText.style.position = "sticky";
+            stickyText.classList.remove("h1_gradient")
+            // name_span.style.animation = "slide_1 1s 1 linear reverse both"
+            // name_span.style.animation = "slide-up 2s normal reverse"
+
+        }
+
+        if (window.scrollY >= originalPosition) {
+            stickyText.style.top = window.scrollY - originalPosition + "px";
+        } else {
+            stickyText.style.top = "0";
+        }
+    });
+});
+
+// $(document).ready(function() {
+//     const stickyText = $(".trigger_logo");
+//     let isSticky = false;
+    
+//     $(window).scroll(function() {
+//         if ($(window).scrollTop() >= stickyText.offset().top) {
+//             if (!isSticky) {
+//                 stickyText.css({
+//                     position: "fixed",
+//                     top: 0,
+//                 });
+//                 isSticky = true;
+//             }
+//         } else {
+//             if (isSticky) {
+//                 stickyText.css({
+//                     position: "sticky",
+//                     top: "auto",
+//                 });
+//                 isSticky = false;
+//             }
+//         }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const stickyText = document.querySelector(".sticky-text");
+//     let originalPosition = stickyText.getBoundingClientRect().top;
+
+//     window.addEventListener("scroll", function () {
+//         if (window.scrollY >= originalPosition) {
+//             if (window.scrollY + stickyText.clientHeight >= originalPosition + stickyText.clientHeight) {
+//                 stickyText.style.top = window.scrollY - originalPosition - stickyText.clientHeight + "px";
+//             } else {
+//                 stickyText.style.top = "0";
+//             }
+//         } else {
+//             stickyText.style.top = "0";
+//         }
+//     });
+// });
+
+
+  </script>
   
 
 </body></html>

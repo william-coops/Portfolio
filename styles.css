@@ -1,9 +1,14 @@
 /* Custom properties/variables  */
 :root {
-    --main-white: #f0f0f0;
-    --main-red: purple;
+    --main-white: black;
+    --main-red: white;
+    --main-blue: rgb(230, 234, 236);
+    --main-gray: linear-gradient(62deg, #6aa6e2 0%, #5b2a8d 100%);
+
+    /* --main-white: #f0f0f0;
+    --main-red: #4556ff;
     --main-blue: #45567d;
-    --main-gray: #303841;
+    --main-gray: #303841; */
   }
   
   /* Base reset */
@@ -78,15 +83,25 @@
   
   h1,
   h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
     text-align: center;
   }
   
   h1 {
-    font-size: 6rem;
-  }
+    font-size: 5rem;
   
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10; */
+  }
+
+  .h1_gradient {
+    background: -webkit-linear-gradient(62deg, #6aa6e2, #5b2a8d);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
   h2 {
     font-size: 4.2rem;
   }
@@ -116,6 +131,7 @@
     width: 100%;
     background: var(--main-red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    
     z-index: 10;
   }
 
@@ -138,14 +154,31 @@
   .logo {
     display: inline-block;
     font-size: 2.2rem;
-    padding: 1em;
-    animation: animate 4s;
+    padding: 0.9em;
+    /* animation: textAnimation 0.1s; */
+    /* animation: textAnimation_reverse 1s;  */
     /* float:left; */
 }
 
-@keyframes animate {
-  from {font-color: red;}
-  to {font-color: yellow;}
+@keyframes textAnimation {
+  0% {
+      transform: scale(0);
+      color: white;
+  }
+  100% {
+      transform: scale(1);
+      color: white;
+  }
+}
+@keyframes textAnimation_reverse {
+  0% {
+      transform: scale(1);
+      color: white;
+  }
+  100% {
+      transform: scale(0);
+      color: white;
+  }
 }
   
  
@@ -156,7 +189,7 @@
   }
   
   .nav-list a:hover {
-    background: var(--main-blue);
+    background: blueviolet;
   }
   
   /* Welcome section */
@@ -165,11 +198,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding: 1%;
     width: 100%;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+    background-image: linear-gradient(62deg, #6aa6e2 0%, #5b2a8d 100%);
   }
   
   .welcome-section > p {
@@ -178,7 +213,88 @@
     font-style: italic;
     color: var(--main-red);
   }
+
+  .trigger_logo {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* transition: top 3s ease, font-size 3s ease, transform 3s ease; */
+
+  }
+
+  .avatar {
+    border-radius: 70%;
+    transform: scale(0.1);
+    align-items: end;
+  }
+
+  /* .slides {
+    display: inline-flex;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+  }
+
+  /* .slides1 span {
+    display: block;
+  } */
+
+  /* .slides1 {
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateY(100%); 
+     animation: slide-up 9s normal forwards;
+    text-align: start;
+  }  */
+
+
+  .welcome-section.animation {
+    animation: slide_1 1s 1;
+    /* animation-direction: reverse; */
+  }
   
+
+  @keyframes slide-up {
+    10%, 33% {
+      transform: translateY(0%);
+    } 43%, 66% {
+      transform: translateY(-100%);
+    } 76%, 100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes slide_1 {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.95);
+    }
+    50% {
+      transform: scale(0.90);
+    }
+    75% {
+      transform: scale(0.85);
+    }
+    100% {
+      transform: scale(0.50);
+    }
+  }
+
+  @keyframes logo_animation {
+    0% {
+        transform: scale(1);
+        color: white;
+    }
+    100% {
+        transform: scale(0.8);
+        color: white;
+    }
+  }
+
   /* Projects section */
   
   .projects-section {
