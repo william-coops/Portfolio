@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
@@ -28,20 +29,35 @@
     <!-- START WELCOME SECTION -->
 
     <section id="welcome-section" class="welcome-section">
-      <p class="bruh2" id="bruh2">Hey I am</p>
-      <!-- <h1 class="trigger_logo" id="trigger_logo">
-        <span class="slides">
-          <span class="slides1" id="name_span">
-            <span>William Cooper</span>
-            <span>William Cooper</span>
-          </span>
-        </span>
-      </h1> -->
-      <h1 class="trigger_logo" id="trigger_logo">William Cooper</h1>
-      <!-- <img class="avatar" src="./index_images/avatar.jpg"> -->
-      <p id="bruh" class="bruh">I am unemployed</p>
-      <!-- <img class="avatar" src="./index_images/avatar.jpg"> -->
+      <div class="content">
+        <div class="text-content">
+          <p>Hey I am</p>
+          <h1 class="trigger_logo" id="trigger_logo">William Cooper</h1>
+          <p id="bruh" class="bruh">I am unemployed</p>
+        </div>
+        <div class="image-content">
+          <!-- <img src="./index_images/avatar.jpg" class="avatar" alt="me"> -->
+          <svg viewBox="-100 -235 500 700" width="400" height="500">
+            <defs>
+              <clipPath id="shape">
+                <!-- <path fill="none" d="M143.2 -174.6C190.7 -162.5 238 -127.6 238.8 -86.7C239.7 -45.7 194 1.2 175.8 57C157.5 112.8 166.6 177.3 141.9 217.6C117.2 257.9 58.6 274 17.3 250.1C-23.9 226.2 -47.8 162.5 -67.8 120.6C-87.8 78.8 -103.8 58.9 -109.9 36.5C-116 14.2 -112.2 -10.5 -99.6 -27.1C-87 -43.7 -65.5 -52.2 -47.5 -73.8C-29.4 -95.5 -14.7 -130.2 16.6 -153C47.8 -175.8 95.6 -186.6 143.2 -174.6" transform="translate(250.96942793643393 200.1404388630216)"/> -->
+                <path fill="none" d="M33.4,-54.7C46.2,-50.4,61.6,-47.4,67.4,-38.5C73.3,-29.6,69.5,-14.8,65.9,-2.1C62.4,10.7,58.9,21.3,52.5,29.3C46.2,37.2,36.8,42.5,27.6,48.3C18.4,54.2,9.2,60.7,-1.3,63C-11.8,65.2,-23.6,63.2,-32.5,57.2C-41.4,51.1,-47.5,41,-53.8,30.8C-60.2,20.6,-66.8,10.3,-65.1,0.9C-63.5,-8.4,-53.7,-16.9,-49,-29.9C-44.3,-43,-44.8,-60.7,-37.5,-68.1C-30.2,-75.6,-15.1,-72.8,-2.4,-68.6C10.3,-64.5,20.5,-58.9,33.4,-54.7Z" transform="translate(150 125)"/>
+              </clipPath>
+            </defs>
+            <image class="hmm" width="400px" height="500px" clip-path="url(#shape)"  xlink:href="./index_images/avatar.jpg" ></image>
+          </svg>
+        </div>
+      </div>
     </section>
+
+    <!-- <h1 class="trigger_logo" id="trigger_logo">
+            <span class="slides">
+              <span class="slides1" id="name_span">
+                <span>William Cooper</span>
+                <span>William Cooper</span>
+              </span>
+            </span>
+          </h1> -->
 
     <!-- END WELCOME SECTION -->
 
@@ -117,7 +133,7 @@
         <!-- <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a> -->
         <a id="profile-link" href="https://github.com/william-coops" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
         <!-- <a href="https://twitter.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter</a> -->
-        <a id="profile-link" href="https://www.linkedin.com/in/will-coop" target="_blank" class="btn contact-details"><i class="fab fa-LinkedIn"> LinkedIn</i></a>
+        <a id="profile-link" href="https://www.linkedin.com/in/will-coop" target="_blank" class="btn contact-details"><i class="fab fa-linkedin-in"> LinkedIn</i></a>
         <a href="mailto:will.coops@me.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
         <a href="tel:+44 7929 859841" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
       </div>
@@ -185,7 +201,7 @@
       
     
       window.addEventListener("scroll", function () {
-        if (window.scrollY >= bruh.offsetTop) {
+        if (window.scrollY+30 >= bruh.offsetTop) {
             // stickyText.classList.add('welcome-section.animation')
             stickyText.style.position = "fixed";
             stickyText.style.top = "0";
@@ -200,11 +216,11 @@
 
         }
 
-        if (window.scrollY >= originalPosition) {
-            stickyText.style.top = window.scrollY - originalPosition + "px";
-        } else {
-            stickyText.style.top = "0";
-        }
+        // if (window.scrollY >= originalPosition) {
+        //     stickyText.style.top = window.scrollY - originalPosition + "px";
+        // } else {
+        //     stickyText.style.top = "0";
+        // }
     });
 });
 
