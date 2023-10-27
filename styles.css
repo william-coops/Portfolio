@@ -34,6 +34,15 @@
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
+
+  html
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* overflow-x: hidden;  */
+    min-width: 50%;
+}
   
   /* A few media query to set some font sizes at different screen sizes.
    * This helps automate a bit of responsiveness.
@@ -79,6 +88,12 @@
     font-weight: 400;
     line-height: 1.4;
     color: var(--main-white);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-width: 700px;
+    
   }
   
   h1,
@@ -131,8 +146,9 @@
     width: 100%;
     background: var(--main-red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-    
+    min-width: 700px;
     z-index: 10;
+    width: 100%;
   }
 
   
@@ -159,28 +175,6 @@
     /* animation: textAnimation_reverse 1s;  */
     /* float:left; */
 }
-
-@keyframes textAnimation {
-  0% {
-      transform: scale(0);
-      color: white;
-  }
-  100% {
-      transform: scale(1);
-      color: white;
-  }
-}
-@keyframes textAnimation_reverse {
-  0% {
-      transform: scale(1);
-      color: white;
-  }
-  100% {
-      transform: scale(0);
-      color: white;
-  }
-}
-  
  
   .nav-list a {
     display: inline-block;
@@ -235,7 +229,8 @@
 }
 
 .trigger_logo-placeholder {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
   transition: height 0s ease; /* Smooth transition for height change */
   overflow: hidden; /* Hide overflow content */
 }

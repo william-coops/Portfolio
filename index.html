@@ -203,9 +203,10 @@
       
     
       window.addEventListener("scroll", function () {
-        if (window.scrollY+35>= bruh.offsetTop) {
+        if (window.scrollY+70>= bruh.offsetTop) {
             // stickyText.classList.add('welcome-section.animation')
-            triggerLogoPlaceholder.style.visibility = 'visible';
+            // triggerLogoPlaceholder.style.visibility = 'visible';
+            triggerLogoPlaceholder.style.display = 'block';
             triggerLogoPlaceholder.style.height = stickyText.offsetHeight + 'px';
             //triggerLogoPlaceholder.style.height = stickyText.offsetWidth + 'px';
             stickyText.style.position = "fixed";
@@ -214,6 +215,7 @@
             stickyText.classList.add("h1_gradient")
         } else {
             triggerLogoPlaceholder.style.visibility = 'hidden';
+            // triggerLogoPlaceholder.style.display = 'none';
             triggerLogoPlaceholder.style.height = '0';
 
             // stickyText.classList.remove('welcome-section.animation')
