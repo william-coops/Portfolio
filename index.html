@@ -32,6 +32,7 @@
       <div class="content">
         <div class="text-content">
           <p>Hey I am</p>
+          <div class="trigger_logo-placeholder"><h1>William Cooper</h1></div> <!-- Placeholder element -->
           <h1 class="trigger_logo" id="trigger_logo">William Cooper</h1>
           <p id="bruh" class="bruh">I am unemployed</p>
         </div>
@@ -197,17 +198,24 @@
       const stickyText = document.querySelector(".trigger_logo");
       const bruh = document.querySelector(".bruh")
       const text_an = document.getElementsByClassName("trigger_logo")
+      const triggerLogoPlaceholder = document.querySelector('.trigger_logo-placeholder');
       // const name_span = document.getElementById("name_span")
       
     
       window.addEventListener("scroll", function () {
-        if (window.scrollY+30 >= bruh.offsetTop) {
+        if (window.scrollY+35>= bruh.offsetTop) {
             // stickyText.classList.add('welcome-section.animation')
+            triggerLogoPlaceholder.style.visibility = 'visible';
+            triggerLogoPlaceholder.style.height = stickyText.offsetHeight + 'px';
+            //triggerLogoPlaceholder.style.height = stickyText.offsetWidth + 'px';
             stickyText.style.position = "fixed";
             stickyText.style.top = "0";
             // text_an.classList.add('welcome-section.animation');
             stickyText.classList.add("h1_gradient")
         } else {
+            triggerLogoPlaceholder.style.visibility = 'hidden';
+            triggerLogoPlaceholder.style.height = '0';
+
             // stickyText.classList.remove('welcome-section.animation')
             stickyText.style.position = "sticky";
             stickyText.classList.remove("h1_gradient")

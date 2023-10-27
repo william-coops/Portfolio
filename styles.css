@@ -195,6 +195,8 @@
   /* Welcome section */
   
   .welcome-section {
+    position: relative;
+    padding-top: 100px;
     display: flex;
     /* flex-direction: column; */
     /* justify-content: center; */
@@ -205,7 +207,6 @@
     background-color: #000;
     /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
     background-image: linear-gradient(62deg, #6aa6e2 0%, #5b2a8d 100%);
-    position: relative;
   }
   
   .text-content > p {
@@ -213,7 +214,7 @@
     font-weight: 200;
     font-style: italic;
     color: var(--main-red);
-    
+    position: relative;
   }
 
   .trigger_logo {
@@ -233,26 +234,33 @@
     justify-content: space-between;
 }
 
+.trigger_logo-placeholder {
+  visibility: hidden;
+  transition: height 0s ease; /* Smooth transition for height change */
+  overflow: hidden; /* Hide overflow content */
+}
+
 .text-content {
-    flex: 1;
-    display: flex;
+  flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  white-space: nowrap;
 }
 
 .image-content {
   display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Align the image to the right */
-  flex: 1; /* Take up available space to push image to the right */
+  /* flex-direction: column; */
+  justify-content: space-around; /* Align the image to the right */
+  /* flex: 1; Take up available space to push image to the right */
   width: 1000px;
   height: 1000px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .image-content svg {
-  width: 100%; /* Set the width of the image as needed */
-  height: 100%;
+  width: 1000px; /* Set the width of the image as needed */
+  height: auto;
   transform: scale(3);
 
 }
