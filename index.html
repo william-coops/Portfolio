@@ -10,16 +10,28 @@
   <body>
     <!-- START NAV -->
       <nav id="navbar" class="nav">
-        <p><h1 class="logo" id="logo"></h1></p>
+        <!-- <p><h1 class="logo" id="logo"></h1></p> -->
         <ul class="nav-list">
           <li>
-            <a href="#welcome-section">About</a>
+            <a class="nav-sections" href="#welcome-section">About</a>
           </li>
           <li>
-            <a href="#projects">Work</a>
+            <a class="nav-sections" href="#projects">Work</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a class="nav-sections" href="#contact">Contact</a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn"> 
+                <i class="fa fa-bars"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#welcome-section">About</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div> 
           </li>
         </ul>
       </nav>
@@ -84,7 +96,7 @@
             <span class="code">/&gt;</span>
           </p>
         </a>
-        <a href="https://1drv.ms/f/s!AsMAn9LOdpnihlhFNIaZzi1IXR4y?e=ZZS2g8" target="_blank" class="project project-tile">
+        <a href="https://github.com/william-coops/Monopoly" target="_blank" class="project project-tile">
           <img class="project-image" src="./index_images/board_final.jpg" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
@@ -100,8 +112,8 @@
             <span class="code">/&gt;</span>
           </p>
         </a>
-        <a href="./index.html" class="project project-tile">
-          <img class="project-image" src="" alt="project">
+        <a href="https://github.com/william-coops/Portfolio" target="_blank" class="project project-tile">
+          <img class="project-image" src="./index_images/website_code_ss.jpg" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
             This Website!
@@ -146,7 +158,7 @@
 
     <footer>
       <p>
-        **Note
+        **Work in progress
       </p>
       <p>
         Created by William Cooper
@@ -191,6 +203,41 @@
   
       // // Listen for scroll events to check the div's visibility
       // window.addEventListener('scroll', animateTextIfOutOfView);
+
+
+      // Function to toggle the dropdown menu
+    function toggleDropdown(shouldShow) {
+        if (shouldShow) {
+            $(".dropbtn").show();
+            $(".nav-sections").hide();
+        } else {
+            $(".dropbtn").hide();
+            $(".nav-sections").show();
+        }
+    }
+
+    // Listen for window resize events
+    $(window).resize(function () {
+        // Check the window width
+        if ($(window).width() <= 768) {
+            // If the window width is less than or equal to 768 pixels, show the dropdown
+            toggleDropdown(true);
+        } else {
+            // If the window width is larger than 768 pixels, hide the dropdown and show the regular nav list
+            toggleDropdown(false);
+        }
+    });
+
+    // Initial check when the page loads
+    $(document).ready(function () {
+        if ($(window).width() <= 768) {
+            toggleDropdown(true);
+        } else {
+            toggleDropdown(false);
+        }
+    });
+
+
 
 
 
