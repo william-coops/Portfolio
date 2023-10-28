@@ -159,6 +159,10 @@
   
   /* this is satisfied on phone */
   @media (max-width: 28.75em) {
+    h1 {
+      font-size: 80%;
+    }
+
     .nav {
       justify-content: flex-end;
     }
