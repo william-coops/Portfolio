@@ -175,8 +175,10 @@
 
     .nav-list .dropdown .dropbtn {
       margin: 0 1rem;
+      padding: 1.85rem;
     }
   }
+
  
   .nav-list a {
     display: inline-block;
