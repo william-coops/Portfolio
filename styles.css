@@ -166,17 +166,15 @@
     /* Show the dropdown content when the screen size is small */
     .dropbtn {
       display: block;
+      margin: 0 0;
+      padding: 1rem;
   }
 
   /* Hide the regular nav list items when the screen size is small */  
   .nav-sections {
     display: none;
   }
-
-    .nav-list .dropdown .dropbtn {
-      margin: 0 0.5rem;
-      padding: 1rem;
-    }
+  
   }
 
  
