@@ -155,27 +155,6 @@
     display: flex;
     margin-right: 2rem;
   }
-  
-  /* this is satisfied on phone */
-  @media (max-width: 28.75em) {
-
-    .nav {
-      justify-content: flex-end;
-    }
-
-    /* Show the dropdown content when the screen size is small */
-    .dropbtn {
-      display: block;
-      margin: 0 0;
-      padding: 1rem;
-  }
-
-  /* Hide the regular nav list items when the screen size is small */  
-  .nav-sections {
-    display: none;
-  }
-
-  }
 
  
   .nav-list a {
@@ -291,7 +270,7 @@
   }
 
   
-  @media (max-width: 30.625em) {
+  /* @media (max-width: 30.625em) {
     .projects-section {
       padding: 6rem 1rem;
     }
@@ -299,7 +278,7 @@
     .projects-grid {
       grid-template-columns: 1fr;
     }
-  }
+  } */
   
   .project {
     background: var(--main-gray);
