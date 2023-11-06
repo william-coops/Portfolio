@@ -351,18 +351,20 @@
     font-weight: 300;
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem;
-    background: white;
+    /* padding: 2rem; */
+    background: var(--main-gray);
     border-top: 4px solid black;
   }
   
   footer > p {
-    margin: 2rem;
+    margin: 5rem;
+    white-space: nowrap;
   }
-  
-  footer i {
-    vertical-align: middle;
+
+  .contact-links {
+    margin: 4rem;
   }
+
   
   @media (max-width: 28.75em) {
     footer {
