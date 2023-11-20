@@ -47,22 +47,30 @@
         <div class="text-content">
           <p>Hey I am</p>
           <div class="trigger_logo-placeholder"><h1>William Cooper</h1></div> <!-- Placeholder element -->
-          <h1 class="trigger_logo" id="trigger_logo">William Cooper</h1>
+          <h1 class="trigger_logo h1_gradient" id="trigger_logo">William Cooper</h1>
           <p id="bruh" class="bruh">I am a recent graduate</p>
         </div>
         <div class="image-content">
           <!-- <img src="./index_images/avatar.jpg" class="avatar" alt="me"> -->
-          <svg viewBox="-100 -235 450 700" width="400" height="500">
+          <!-- <svg viewBox="-100 -235 450 700" width="400" height="500"> -->
+            <svg viewBox="-80 -286 450 700" width="400" height="400">
             <defs>
               <clipPath id="shape">
                 <!-- <path fill="none" d="M143.2 -174.6C190.7 -162.5 238 -127.6 238.8 -86.7C239.7 -45.7 194 1.2 175.8 57C157.5 112.8 166.6 177.3 141.9 217.6C117.2 257.9 58.6 274 17.3 250.1C-23.9 226.2 -47.8 162.5 -67.8 120.6C-87.8 78.8 -103.8 58.9 -109.9 36.5C-116 14.2 -112.2 -10.5 -99.6 -27.1C-87 -43.7 -65.5 -52.2 -47.5 -73.8C-29.4 -95.5 -14.7 -130.2 16.6 -153C47.8 -175.8 95.6 -186.6 143.2 -174.6" transform="translate(250.96942793643393 200.1404388630216)"/> -->
-                <path fill="none" d="M33.4,-54.7C46.2,-50.4,61.6,-47.4,67.4,-38.5C73.3,-29.6,69.5,-14.8,65.9,-2.1C62.4,10.7,58.9,21.3,52.5,29.3C46.2,37.2,36.8,42.5,27.6,48.3C18.4,54.2,9.2,60.7,-1.3,63C-11.8,65.2,-23.6,63.2,-32.5,57.2C-41.4,51.1,-47.5,41,-53.8,30.8C-60.2,20.6,-66.8,10.3,-65.1,0.9C-63.5,-8.4,-53.7,-16.9,-49,-29.9C-44.3,-43,-44.8,-60.7,-37.5,-68.1C-30.2,-75.6,-15.1,-72.8,-2.4,-68.6C10.3,-64.5,20.5,-58.9,33.4,-54.7Z" transform="translate(150 125)"/>
+                <!-- <path d="M33.4,-54.7C46.2,-50.4,61.6,-47.4,67.4,-38.5C73.3,-29.6,69.5,-14.8,65.9,-2.1C62.4,10.7,58.9,21.3,52.5,29.3C46.2,37.2,36.8,42.5,27.6,48.3C18.4,54.2,9.2,60.7,-1.3,63C-11.8,65.2,-23.6,63.2,-32.5,57.2C-41.4,51.1,-47.5,41,-53.8,30.8C-60.2,20.6,-66.8,10.3,-65.1,0.9C-63.5,-8.4,-53.7,-16.9,-49,-29.9C-44.3,-43,-44.8,-60.7,-37.5,-68.1C-30.2,-75.6,-15.1,-72.8,-2.4,-68.6C10.3,-64.5,20.5,-58.9,33.4,-54.7Z" transform="translate(150 125)"/> -->
+                <path d="M33.4,-54.7C46.2,-50.4,61.6,-47.4,67.4,-38.5C73.3,-29.6,69.5,-14.8,65.9,-2.1C62.4,10.7,58.9,21.3,52.5,29.3C46.2,37.2,36.8,42.5,27.6,48.3C18.4,54.2,9.2,60.7,-1.3,63C-11.8,65.2,-23.6,63.2,-32.5,57.2C-41.4,51.1,-47.5,41,-53.8,30.8C-60.2,20.6,-66.8,10.3,-65.1,0.9C-63.5,-8.4,-53.7,-16.9,-49,-29.9C-44.3,-43,-44.8,-60.7,-37.5,-68.1C-30.2,-75.6,-15.1,-72.8,-2.4,-68.6C10.3,-64.5,20.5,-58.9,33.4,-54.7Z" transform="translate(158 75)"/>
               </clipPath>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#6aa6e2;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#5b2a8d;stop-opacity:1" />
+              </linearGradient>
             </defs>
-            <image class="hmm" width="400px" height="500px" clip-path="url(#shape)"  xlink:href="./index_images/avatar.jpg" ></image>
+            <rect width="300" height="300" fill="url(#grad1)" clip-path="url(#shape)" />
+            <image class="hmm" width="400px" height="500px" clip-path="url(#shape)"  xlink:href="./index_images/avatar-cutout-cutout.png" ></image>
           </svg>
         </div>
       </div>
+      
     </section>
 
     <!-- <h1 class="trigger_logo" id="trigger_logo">
@@ -123,17 +131,17 @@
             <span class="code">/&gt;</span>
           </p>
         </a>
-        <a href="./other-projects.html" class="project project-tile">
-          <img class="project-image" src="" alt="project">
+        <a href="./index_pdf/ATLAS_Lab_Report.pdf" target="_blank" class="project project-tile">
+          <img class="project-image" src="./index_images/ATLASss.png" alt="project">
           <p class="project-title">
             <span class="code">&lt;</span>
-            All
+            ATLAS CERN Lab
             <span class="code">/&gt;</span>
           </p>
         </a>
       </div>
 
-      <!-- <a href="" class="btn btn-show-all" target="_blank">Show all<i class="fas fa-chevron-right"></i></a> -->
+      <a href="./other-projects.html" class="btn btn-show-all" target="_blank">Show all<i class="fas fa-chevron-right"></i></a>
     </section>
 
     <!-- END PROJECTS SECTION -->

@@ -105,7 +105,8 @@
             stickyText.style.position = "fixed";
             stickyText.style.top = "0";
             // text_an.classList.add('welcome-section.animation');
-            stickyText.classList.add("h1_gradient")
+            stickyText.classList.add("h1_white")
+            stickyText.classList.remove("h1_gradient")
         } else {
             triggerLogoPlaceholder.style.visibility = 'hidden';
             // triggerLogoPlaceholder.style.display = 'none';
@@ -113,7 +114,8 @@
 
             // stickyText.classList.remove('welcome-section.animation')
             stickyText.style.position = "sticky";
-            stickyText.classList.remove("h1_gradient")
+            stickyText.classList.remove("h1_white")
+            stickyText.classList.add("h1_gradient")
             // name_span.style.animation = "slide_1 1s 1 linear reverse both"
             // name_span.style.animation = "slide-up 2s normal reverse"
 
